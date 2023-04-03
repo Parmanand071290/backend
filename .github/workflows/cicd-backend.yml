@@ -15,12 +15,22 @@ jobs:
       matrix:
         node-version: [16.x]
         
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+    steps:    
+      - name: Checkout code
+        uses: actions/checkout@v3
+       
+      - name: Install Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install 
-      - run: pm2 kill
-      - run: pm2 start npm -- start
       
+      - name: Install pm2
+        run: npm install pm2 -g
+        
+      - run: npm install 
+      
+      - name: To Kill pm2
+      - run: pm2 kill
+      
+      - name: Start pm2 process
+        run: pm2 start npm -- start     
