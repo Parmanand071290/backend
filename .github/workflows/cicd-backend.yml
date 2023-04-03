@@ -20,8 +20,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install --legacy-peer-deps 
-      - run: npm run build
+      - run: npm install 
       - run: pm2 kill
       - run: pm2 start npm -- start
       
