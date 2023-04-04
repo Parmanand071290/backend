@@ -30,4 +30,4 @@ jobs:
       - run: npm install 
       
       - name: Restart pm2 process
-        run: pm2 restart my-app     
+        run: pm2 restart npm -- start    
