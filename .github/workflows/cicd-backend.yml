@@ -29,5 +29,5 @@ jobs:
         
       - run: npm install 
         
-      - name: start pm2 process
+      - name: pm2 restart process
         run: cd ~/backend/_work/backend/backend && pm2 restart wiki    
