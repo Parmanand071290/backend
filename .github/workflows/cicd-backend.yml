@@ -29,8 +29,8 @@ jobs:
         
       - run: npm install 
       
-      - name: Restart pm2 process
-        run: ~/backend/_work/backend/backend && pm2 kill
+      - name: kill pm2 process
+        run: cd ~/backend/_work/backend/backend && pm2 kill
         
       - name: start pm2 process
-        run: ~/backend/_work/backend/backend && pm2 start npm -- start    
+        run: cd ~/backend/_work/backend/backend && pm2 start npm -- start    
