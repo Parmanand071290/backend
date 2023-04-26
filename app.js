@@ -14,3 +14,6 @@ app.get('/',(req,res)=>{
 })
 
 app.listen(3000)
+
+const result = sub(3, 4);
+console.log(result);
