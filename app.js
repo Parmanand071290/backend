@@ -3,6 +3,10 @@ const app = express()
 
 var abc;
 
+const add = function(a, b) {
+  return a + b;
+};
+
 app.get('/',(req,res)=>{
     res.json({
         msg:'Hello Backend 6'
