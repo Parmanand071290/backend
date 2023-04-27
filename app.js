@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-var abc;
+//var abc;
 
 const add = function(a, b) {
   return a + b;
@@ -15,5 +15,5 @@ app.get('/',(req,res)=>{
 
 app.listen(3000)
 
-const result //= add(3, 4);
-//console.log(result);
+const result = add(3, 4);
+console.log(result);
