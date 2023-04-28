@@ -46,7 +46,8 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
       with:
-        queries: +security-and-quality,javascript/ql/src/Security/CWE-89/CWE89-Query.ql
+        query: javascript/ql/src/Security/CWE-89/CWE89-Query.ql
+        additional-queries: security-and-quality
         languages: ${{ matrix.language }}
         # If you wish to specify custom queries, you can do so here or in a config file.
         # By default, queries listed here will override any specified in a config file.
