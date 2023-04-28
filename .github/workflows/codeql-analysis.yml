@@ -46,9 +46,7 @@ jobs:
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
       with:
-        config-file: ./.github/codeql/codeql-config.yml
-        queries: +security-and-quality,octo-org/javascript-qlpack/show_ifs.ql@main
-        packs: +scope/pack1,scope/pack2@1.2.3,scope/pack3@4.5.6:path/to/queries
+        queries: +security-and-quality
         languages: ${{ matrix.language }}
         
         # If you wish to specify custom queries, you can do so here or in a config file.
